@@ -1,4 +1,5 @@
 UE4 Asynchronous Asset Loading
+
 FStreamableManager将作为异步资源加载器。这最好放在一个持久化对象上，例如GameInstance，由于以下两个原因：
 1.为了使我们随时能够简单的获取加载器并加载资源。
 2.它能够保持持久性，因为你不会想在加载资源时候丢失或销毁它。
@@ -9,5 +10,8 @@ SimpleAsyncLoad
 RequestAsyncLoad
 加载一个资源数组，当完成时触发委托。这将会卸载全部资源当delegate is called，以确保垃圾回收会发生。
 
+RequestAsyncLoad函数
+初始化资源请求队列，调用StartHandleRequests
 参考资料：
 https://wiki.unrealengine.com/TAssetPtr_and_Asynchronous_Asset_Loading
+https://zhuanlan.zhihu.com/p/33728799
